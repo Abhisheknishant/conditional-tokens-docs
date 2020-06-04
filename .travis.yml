@@ -1,6 +1,9 @@
 if: (branch = develop) OR (branch = master) OR (type = pull_request) OR (tag IS present)
 sudo: required
 dist: bionic
+arch:
+    - amd64
+    - arm64
 language: node_js
 before_install:
   # Needed to deploy pull request and releases
